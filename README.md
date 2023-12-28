@@ -28,6 +28,7 @@ npx create-react-native-app
 Once you're up and running with Create React Native App, visit [this tutorial](https://reactnative.dev/docs/tutorial.html) for more information on building apps with React Native.
 
 ## A brief overview of the project
+
 - User Data Fetching & Data Handling:
 
   - Utilizes the Axios library to make HTTP requests.
@@ -47,7 +48,7 @@ Once you're up and running with Create React Native App, visit [this tutorial](h
 - Navigation:
 
   - Utilizes React Navigation for navigation within the app.
-  - Navigates back to the previous screen when the "arrow-back" button is pressed.  
+  - Navigates back to the previous screen when the "arrow-back" button is pressed.
 
 - Styling and UI Elements:
 
@@ -60,11 +61,11 @@ Once you're up and running with Create React Native App, visit [this tutorial](h
 
 - Code Quality:
 
-  - Clean, organized, and well-commented code  
+  - Clean, organized, and well-commented code
 
-- React Native Usage:  
+- React Native Usage:
 
-  -  Efficient use of React Native components and navigation
+  - Efficient use of React Native components and navigation
 
 - Expo Usage:
 
@@ -121,55 +122,42 @@ If you've checked the documentation and currently open issues, please either [op
 
 Please see [Contributing guide](https://github.com/expo/expo-cli/blob/master/CONTRIBUTING.md) in the Expo CLI monorepo for instructions on contributing to Expo CLI.
 
-
 #### Happy?? Star ⭐ this Repo. 🤩
 
-[![ForTheBadge uses-git](http://ForTheBadge.com/images/badges/uses-git.svg)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0)
-[![ForTheBadge uses-html](http://ForTheBadge.com/images/badges/uses-html.svg)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0)
-[![ForTheBadge uses-css](http://ForTheBadge.com/images/badges/uses-css.svg)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0)
-[![ForTheBadge uses-js](http://ForTheBadge.com/images/badges/uses-js.svg)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0)
+[![ForTheBadge uses-git](http://ForTheBadge.com/images/badges/uses-git.svg)](https://github.com/piug-07/CodeFobe)
+[![ForTheBadge uses-html](http://ForTheBadge.com/images/badges/uses-html.svg)](https://github.com/piug-07/CodeFobe)
+[![ForTheBadge uses-css](http://ForTheBadge.com/images/badges/uses-css.svg)](https://github.com/piug-07/CodeFobe)
+[![ForTheBadge uses-js](http://ForTheBadge.com/images/badges/uses-js.svg)](https://github.com/piug-07/CodeFobe)
 
 > Made By Piyush with ❤️
 
-
 <br><br>
 
-[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0)
-[![ForTheBadge built-by-developers](http://ForTheBadge.com/images/badges/built-by-developers.svg)](https://github.com/DSC-JSS-NOIDA/Foss-events2.0)
-                                                   
-
-> **_Need help?_** 
-> **_Feel free to contact us @ [guptapiyush315@gmail.com](mailto:guptapiyush315@gmail.com?Subject=contributing Regards)_**
+[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://github.com/piug-07/CodeFobe)
+[![ForTheBadge built-by-developers](http://ForTheBadge.com/images/badges/built-by-developers.svg)](https://github.com/piug-07/CodeFobe)
 
 <!-- Footer -->
 
 ---
 
-## Connect with us  
+## Connect with us
+
 <div align="center">
- <a href="https://dscjss.in/"><img src="https://user-images.githubusercontent.com/42115530/94302134-5c28c680-ff89-11ea-9ca4-5dcdd4279786.png"  height=100px /></a> <br><br> 
-<a href="https://github.com/DSC-JSS-NOIDA" target="_blank">
+ <br><br> 
+<a href="https://github.com/piug-07" target="_blank">
 <img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
 </a>
-<a href="https://twitter.com/DSCJSSATEN" target="_blank">
+<a href="https://twitter.com/piug_07" target="_blank">
 <img src=https://img.shields.io/badge/twitter-%2300acee.svg?&style=for-the-badge&logo=twitter&logoColor=white alt=twitter style="margin-bottom: 5px;" />
 </a>
-<a href="https://www.linkedin.com/company/dsc-jssaten/" target="_blank">
+<a href="https://www.linkedin.com/in/piyushg07/" target="_blank">
 <img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
 </a>
-<a href="https://www.facebook.com/dscjssnoida/" target="_blank">
-<img src=https://img.shields.io/badge/facebook-%232E87FB.svg?&style=for-the-badge&logo=facebook&logoColor=white alt=facebook style="margin-bottom: 5px;" />
-</a>
-<a href="https://www.instagram.com/dscjssaten/?igshid=9ubqtp1ssqsi" target="_blank">
+<a href="https://www.instagram.com/piy_ushg07/" target="_blank">
 <img src=https://img.shields.io/badge/instagram-%23000000.svg?&style=for-the-badge&logo=instagram&logoColor=white alt=instagram style="margin-bottom: 5px;" />
 </a>
-<a href="https://medium.com/dsc-jss-noida" target="_blank">
-<img src=https://img.shields.io/badge/medium-%23292929.svg?&style=for-the-badge&logo=medium&logoColor=white alt=medium style="margin-bottom: 5px;" />
-</a>  
-<a href="https://www.youtube.com/channel/UCkELk5JFDceaSf8pBa19kDQ" target="_blank">
-<img src=https://img.shields.io/badge/youtube-%23FF0000.svg?&style=for-the-badge&logo=youtube&logoColor=white alt=youtube style="margin-bottom: 5px;" />
-</a> 
-</div> 
+ <br><br> 
+</div>
 
 <p>
     <a aria-label="sponsored by expo" href="http://expo.io">
