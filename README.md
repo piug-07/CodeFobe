@@ -131,7 +131,7 @@ Please see [Contributing guide](https://github.com/expo/expo-cli/blob/master/CON
 
 > Made By Piyush with ❤️
 
-<br><br>
+<br>
 
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://github.com/piug-07/CodeFobe)
 [![ForTheBadge built-by-developers](http://ForTheBadge.com/images/badges/built-by-developers.svg)](https://github.com/piug-07/CodeFobe)

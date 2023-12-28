@@ -9,6 +9,9 @@ import UserProfile from './Screens/UserProfile/UserProfile.js';
 const StackNavigator = () => {
     const Stack = createNativeStackNavigator();
   return (
+
+    //Navigation Page to navigate particular Screens
+
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} options={{headerShown:false}}/>

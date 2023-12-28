@@ -9,6 +9,8 @@ const HomeScreen = () => {
   const [data, setData] = useState([]);
   const navigation = useNavigation();
 
+// Fetching data through api using axios
+
   useEffect(() => {
     axios.get('https://random-data-api.com/api/users/random_user?size=80').then((response) => {
       if(response){
@@ -125,6 +127,8 @@ const HomeScreen = () => {
 
             </Pressable>
           </View>
+
+          {/* mapping all random user in landing screen and showing some info */}
 
           {data?.map((element, index) => {
             // console.log("data", element)

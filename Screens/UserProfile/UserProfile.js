@@ -9,8 +9,11 @@ const UserProfile = () => {
     const navigation = useNavigation();
 
     useEffect(() => {
+        // callback fuction
         fetchData();
     }, []);
+
+    // Fetching data through api using axios
 
     const fetchData = async () => {
         try {
@@ -45,7 +48,11 @@ const UserProfile = () => {
                     brightness: 0.1,
                 }}>
                 <View style={{ flex: 1 }} >
-                    {/* ----------------------------header section------------------------ */}
+
+
+                    {/* ----------------------------header section--------------------------------------------------------------------------------------- */}
+
+
                     <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
                         <Text style={{ alignItems: 'center', fontSize: 20, fontWeight: 'bold', marginTop: 10, marginLeft: 20 }}>
                             <Ionicons
@@ -65,6 +72,12 @@ const UserProfile = () => {
                         </Pressable>
                     </View>
                     <View style={{ borderBottomWidth: 1, borderBottomColor: '#5cb1f7', marginVertical: 10 }} />
+
+
+
+                    {/* mapping all random user in landing screen and showing some info */}
+
+
                     {data?.map((element, index) => {
                         // console.log(element)
                         return (
@@ -78,7 +91,9 @@ const UserProfile = () => {
 
 
 
-                                {/* -----------Image Section---------- */}
+                                {/* -----------Image Section----------------------------------------------------------------------------- */}
+
+
                                 <View>
                                     <Image
                                         style={{
@@ -107,7 +122,7 @@ const UserProfile = () => {
                                     </Text>
                                 </View>
 
-                                {/* ------------------user details----------------- */}
+                                {/* ------------------user details------------------------------------------------------------------------------ */}
 
                                 <View>
 
@@ -160,7 +175,9 @@ const UserProfile = () => {
                                         </Text>
                                     </View>
                                 </View>
-                                {/* -----------------------------------------------employment Details--------------------- */}
+
+
+                                {/* -----------------------------------------------employment Details------------------------------------------------- */}
 
                                 <View style={{ flex: 1, marginTop: 20, }}>
                                     <Text style={{ fontSize: 20, fontWeight: 'bold', marginTop: 20, textAlign: 'center', marginHorizontal: 'auto' }}>Employment Details</Text>
@@ -184,7 +201,11 @@ const UserProfile = () => {
                                         </View>
                                     </View>
                                 </View>
-                                {/* ----------------------------------------User address------------------------------ */}
+
+
+                                {/* ----------------------------------------User address------------------------------------------------------------------------- */}
+
+
 
                                 <View style={{ flex: 1, marginTop: 20, }}>
                                     <Text style={{ fontSize: 20, fontWeight: 'bold', marginTop: 20, textAlign: 'center', marginHorizontal: 'auto' }}>Address Details</Text>

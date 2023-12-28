@@ -8,6 +8,9 @@ export default function App() {
 
 
   return (
+
+    //Main Page or index page to enter into the app
+
     <SafeAreaView style={{ flex: 1, marginTop: 30, backgroundColor: "#F0F0F0" }}>
     <View style={styles.container}>
       <StackNavigator />
