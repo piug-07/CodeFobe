@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { ScrollView, StyleSheet, View, Text, TouchableOpacity, Image, ImageBackground } from 'react-native';
+import { ScrollView, StyleSheet, View, Text, TouchableOpacity, Image, ImageBackground, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import axios from 'axios';
-const image = require('../../assets/elvis-bekmanis-01EbaBH1g3Y-unsplash (2).jpg');
+import image from '../../assets/elvis-bekmanis-01EbaBH1g3Y-unsplash (2).jpg';
 
 
 const UserProfile = () => {
@@ -35,14 +35,13 @@ const UserProfile = () => {
 
     return (
         <ScrollView>
-            <View style={{ flex: 1 }} >
-                <ImageBackground source={image} resizeMode="cover" styel={{
-                    flex: 1,
-                    resizeMode: 'cover',
-                    justifyContent: 'center',
-                    brightness: 0.1,
-                }}>
-
+            <ImageBackground source={image} resizeMode="cover" styel={{
+                flex: 1,
+                resizeMode: 'cover',
+                justifyContent: 'center',
+                brightness: 0.1,
+            }}>
+                <View style={{ flex: 1 }} >
                     {/* ----------------------------header section------------------------ */}
                     <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
                         <Text style={{ alignItems: 'center', fontSize: 20, fontWeight: 'bold', marginTop: 10 }}>
@@ -51,30 +50,32 @@ const UserProfile = () => {
                                 style={{ marginLeft: 5, marginRight: 5 }}
                                 name="arrow-back"
                                 size={26}
-
                                 color="black"
                             />
                             UserProfile
                         </Text>
-                        <TouchableOpacity title="Refresh" onPress={fetchData} style={{
+                        <Pressable title="Refresh" onPress={fetchData} style={{
                             alignItems: 'center', fontSize: 35, fontWeight: 'bold', marginRight: 20, padding: 5,
                             backgroundColor: '#bfd0de', width: 100, borderRadius: 15, marginTop: 17
                         }}>
                             <Text>next User</Text>
-                        </TouchableOpacity>
+                        </Pressable>
                     </View>
                     <View style={{ borderBottomWidth: 1, borderBottomColor: '#5cb1f7', marginVertical: 10 }} />
                     {data.map((element, index) => {
                         // console.log(element)
                         return (
                             <View style={{ flex: 1 }} key={index}>
+
+
                                 <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
                                     <Text>id : </Text>
                                     <Text style={{ fontWeight: 'bold' }}>{element.id}</Text>
                                 </View>
 
 
-                                {/* -----------Image Section---------- */}.
+
+                                {/* -----------Image Section---------- */}
                                 <View>
                                     <Image
                                         style={{
@@ -98,7 +99,7 @@ const UserProfile = () => {
                                 <View>
                                     <Text style={{ fontSize: 20, fontWeight: 'bold', marginTop: 20, textAlign: 'center' }}>
                                         {element.username}
-                                       
+
                                     </Text>
                                 </View>
 
@@ -106,12 +107,11 @@ const UserProfile = () => {
 
                                 <View>
 
-
                                     <View style={{ flexDirection: 'row', marginTop: 20, marginBottom: 10, marginLeft: 35, marginRight: 40, }}>
                                         <Text style={{ fontSize: 15, fontWeight: 'bold', width: 100 }}>
                                             FullName :
                                         </Text>
-                                        <Text style={{ fontSize: 15, fontWeight: '350', }}>
+                                        <Text style={{ fontSize: 15, fontWeight: '400', }}>
                                             {element.first_name} {element.last_name}
                                         </Text>
                                     </View>
@@ -119,7 +119,7 @@ const UserProfile = () => {
                                         <Text style={{ fontSize: 15, fontWeight: 'bold', width: 100 }}>
                                             Email :
                                         </Text>
-                                        <Text style={{ fontSize: 15, fontWeight: '350', }}>
+                                        <Text style={{ fontSize: 15, fontWeight: '400', }}>
                                             {element.email}
                                         </Text>
                                     </View>
@@ -127,7 +127,7 @@ const UserProfile = () => {
                                         <Text style={{ fontSize: 15, fontWeight: 'bold', width: 100 }}>
                                             Gender :
                                         </Text>
-                                        <Text style={{ fontSize: 15, fontWeight: '350', }}>
+                                        <Text style={{ fontSize: 15, fontWeight: '400', }}>
                                             {element.gender}
                                         </Text>
                                     </View>
@@ -135,7 +135,7 @@ const UserProfile = () => {
                                         <Text style={{ fontSize: 15, fontWeight: 'bold', width: 100 }}>
                                             PhoneNo. :
                                         </Text>
-                                        <Text style={{ fontSize: 15, fontWeight: '350', }}>
+                                        <Text style={{ fontSize: 15, fontWeight: '400', }}>
                                             {element.phone_number}
                                         </Text>
                                     </View>
@@ -143,7 +143,7 @@ const UserProfile = () => {
                                         <Text style={{ fontSize: 15, fontWeight: 'bold', width: 110 }}>
                                             Date Of Birth :
                                         </Text>
-                                        <Text style={{ fontSize: 15, fontWeight: '350', }}>
+                                        <Text style={{ fontSize: 15, fontWeight: '400', }}>
                                             {element.date_of_birth}
                                         </Text>
                                     </View>
@@ -151,7 +151,7 @@ const UserProfile = () => {
                                         <Text style={{ fontSize: 15, fontWeight: 'bold', width: 100 }}>
                                             Uid :
                                         </Text>
-                                        <Text style={{ fontSize: 15, fontWeight: '350', }}>
+                                        <Text style={{ fontSize: 15, fontWeight: '400', }}>
                                             {element.uid}
                                         </Text>
                                     </View>
@@ -165,7 +165,7 @@ const UserProfile = () => {
                                             <Text style={{ fontSize: 15, fontWeight: 'bold', width: 100 }}>
                                                 Title :
                                             </Text>
-                                            <Text style={{ fontSize: 15, fontWeight: '350', }}>
+                                            <Text style={{ fontSize: 15, fontWeight: '400', }}>
                                                 {element.employment.title}
                                             </Text>
                                         </View>
@@ -174,7 +174,7 @@ const UserProfile = () => {
                                                 {/* {element.first_name} */}
                                                 Key Skill :
                                             </Text>
-                                            <Text style={{ fontSize: 15, fontWeight: '350', }}>
+                                            <Text style={{ fontSize: 15, fontWeight: '400', }}>
                                                 {element.employment.key_skill}
                                             </Text>
                                         </View>
@@ -189,7 +189,7 @@ const UserProfile = () => {
                                             <Text style={{ fontSize: 15, fontWeight: 'bold', width: 100 }}>
                                                 Address :
                                             </Text>
-                                            <Text style={{ fontSize: 15, fontWeight: '350', }}>
+                                            <Text style={{ fontSize: 15, fontWeight: '400' }}>
                                                 {element.address.street_address}, {element.addressstreet_name}, {element.address.city}
 
                                             </Text>
@@ -198,21 +198,18 @@ const UserProfile = () => {
                                             <Text style={{ fontSize: 15, fontWeight: 'bold', width: 100 }}>
                                                 Country :
                                             </Text>
-                                            <Text style={{ fontSize: 15, fontWeight: '350', }}>
+                                            <Text style={{ fontSize: 15, fontWeight: '400', }}>
                                                 {element.address.country}
                                             </Text>
                                         </View>
                                     </View>
                                 </View>
 
-
-
-                                {/* <Text>Render your data here</Text> */}
                             </View>
                         );
                     })}
-                </ImageBackground>
-            </View>
+                </View>
+            </ImageBackground>
         </ScrollView>
     );
 };

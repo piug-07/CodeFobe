@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "ProfileDisplay",
-    "slug": "ProfileDisplay",
+    "name": "CodeFobe",
+    "slug": "CodeFobe",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.piyush_07.CodeFobe"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ee26789c-f577-46bb-9ad4-f4e466d31af6"
+      }
     }
   }
 }

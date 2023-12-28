@@ -1,4 +1,4 @@
-import { SafeAreaView, StyleSheet,Pressable, Text, View, Image, ScrollView } from 'react-native'
+import { SafeAreaView, StyleSheet, Pressable, Text, View, Image, ScrollView } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { Feather } from '@expo/vector-icons';
@@ -18,26 +18,78 @@ const HomeScreen = () => {
 
   return (
     <ScrollView>
-      <View style={styles.container}>
-        <View style={styles.container1}>
-          <Text style={styles.Head}>Intern Assignment</Text>
+      <View style={{
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+      }}>
+        <View style={{
+          width: 370,
+          backgroundColor: '#4daeff',
+        }}>
+          <Text style={{
+            fontSize: 25,
+            fontWeight: 'bold',
+            color: '#fff',
+            marginTop: 10,
+            marginBottom: 10,
+            alignItems: 'center',
+            marginLeft: 110
+          }}>Intern Assignment</Text>
         </View>
 
-        <Pressable style={styles.Random} onPress={() => navigation.navigate("UserProfile")}>
+        <Pressable style={{
+          backgroundColor: '#4daeff',
+          width: 230,
+          height: 30,
+          alignItems: 'center',
+          justifyContent: 'center',
+          borderRadius: 20,
+          marginTop: 20,
+          // marginBottom: 10,
+          fontSize: 20,
+          fontWeight: 'bold',
+          color: '#fff',
+        }} onPress={() => navigation.navigate("UserProfile")}>
           <Text>
-          Random User Profile
+            Random User Profile
           </Text>
-          </Pressable>
+        </Pressable>
 
-        <View style={styles.detail} >
-          <View style={styles.h1}>
+        <View style={{ marginTop: 20, }} >
+          <View style={{
+            fontSize: 20,
+            fontWeight: 'bold',
+            color: '#000',
+            marginTop: 10,
+            marginBottom: 5,
+            alignItems: 'center',
+          }}>
             <Feather name="users" size={24} color="black" />
-            <Text style={styles.h1}>All User's</Text>
+            <Text style={{
+              fontSize: 20,
+              fontWeight: 'bold',
+              color: '#000',
+              marginTop: 10,
+              marginBottom: 5,
+              alignItems: 'center',
+            }}>All User's</Text>
           </View>
 
 
-          <View style={styles.btn1}>
-            <Pressable style={styles.btn0}>
+          <View style={{ marginBottom: 10 }}>
+            <Pressable style={{
+              flex: 1,
+              flexDirection: 'row',
+              width: 370,
+              height: 'auto',
+              padding: 5,
+              backgroundColor: '#bfd0de',
+              alignItems: 'center',
+              justifyContent: 'space-evenly',
+              borderRadius: 10,
+              marginTop: 10,
+            }}>
               <View >
                 <Text>
                   S.no
@@ -73,22 +125,40 @@ const HomeScreen = () => {
           {data.map((element, index) => {
             // console.log("data", element)
             return (
-              <View style={styles.btn1} key={index}>
-                <Pressable style={styles.btn} >
+              <View style={{ marginBottom: 10 }} key={index}>
+                <Pressable style={{
+                  flex: 1,
+                  flexDirection: 'row',
+                  width: 370,
+                  height: 'auto',
+                  padding: 5,
+                  backgroundColor: '#bfd0de',
+                  alignItems: 'center',
+                  // justifyContent: 'space-evenly',
+                  borderRadius: 10,
+                  marginTop: 10,
+                }} >
                   <View>
-                    <Text style={styles.user}>
+                    <Text style={{
+                      marginLeft: 30,
+                      marginRight: 25
+                    }}>
                       {index + 1}.
                     </Text>
                   </View>
                   <View >
-                    <Text style={styles.user1}>
+                    <Text style={{ marginRight: 15 }}>
                       {element.id}
                     </Text>
                   </View>
 
-                  <View style={styles.user2}>
+                  <View style={{ marginRight: 20 }}>
                     <Image
-                      style={styles.logo}
+                      style={{
+                        width: 55,
+                        height: 55,
+                        borderRadius: 50
+                      }}
                       // source={{
                       //   uri: 'https://i.postimg.cc/mD0J0xYw/Whats-App-Image-2023-12-23-at-10-36-11-c59d566b.jpg',
                       // }}
@@ -99,7 +169,7 @@ const HomeScreen = () => {
                   </View>
 
                   <View >
-                    <Text style={styles.user3}>
+                    <Text style={{ width: 70, }}>
                       {element.first_name}
                     </Text>
                     {/* first_name */}
@@ -131,99 +201,4 @@ const HomeScreen = () => {
 // ---------------------------css -----------------------------
 export default HomeScreen
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    // justifyContent: 'center',
-  },
-  container1: {
-    width: 370,
-    backgroundColor: '#4daeff',
-
-  },
-  h1: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#000',
-    marginTop: 10,
-    marginBottom: 5,
-    alignItems: 'center',
-    // marginLeft: 150
-
-  },
-  Head: {
-    fontSize: 25,
-    fontWeight: 'bold',
-    color: '#fff',
-    marginTop: 10,
-    marginBottom: 10,
-    alignItems: 'center',
-    marginLeft: 110
-  },
-  detail: {
-    marginTop: 20,
-  },
-  btn0: {
-    flex: 1,
-    flexDirection: 'row',
-    width: 370,
-    height: 'auto',
-    padding: 5,
-    backgroundColor: '#bfd0de',
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
-    borderRadius: 10,
-    marginTop: 10,
-  },
-  btn: {
-    flex: 1,
-    flexDirection: 'row',
-    width: 370,
-    height: 'auto',
-    padding: 5,
-    backgroundColor: '#bfd0de',
-    alignItems: 'center',
-    // justifyContent: 'space-evenly',
-    borderRadius: 10,
-    marginTop: 10,
-  },
-  btn1: {
-    marginBottom: 10
-  },
-  user: {
-    marginLeft: 30,
-    marginRight: 25
-  },
-  user1: {
-
-    marginRight: 15
-  },
-  user2: {
-
-    marginRight: 20
-  },
-  user3: {
-    width: 70,
-    // marginRight:15 
-  },
-  logo: {
-    width: 55,
-    height: 55,
-    borderRadius: 50
-  },
-  Random:{
-    backgroundColor: '#4daeff',
-    width: 230,
-    height: 30,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 20,
-    marginTop: 20,
-    // marginBottom: 10,
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#fff',
-  }
-});
+const styles = StyleSheet.create({});
