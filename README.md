@@ -28,39 +28,39 @@ npx create-react-native-app
 Once you're up and running with Create React Native App, visit [this tutorial](https://reactnative.dev/docs/tutorial.html) for more information on building apps with React Native.
 
 ## A brief overview of the project
--User Data Fetching:
+- User Data Fetching:
 
-  Utilizes the Axios library to make HTTP requests.
-  Fetches user data from the 'https://random-data-api.com/api/users/random_user' API endpoint.
+  - Utilizes the Axios library to make HTTP requests.
+  - Fetches user data from the 'https://random-data-api.com/api/users/random_user' API endpoint.
 
--User Profile Screen:
+- User Profile Screen:
 
-  Displays user profile information in a ScrollView.
-  Background image is set using ImageBackground component with a specified image source.
-  User details such as ID, username, avatar, full name, email, gender, phone number, date of birth, and UID are shown.
+ - Displays user profile information in a ScrollView.
+ - Background image is set using ImageBackground component with a specified image source.
+ - User details such as ID, username, avatar, full name, email, gender, phone number, date of birth, and UID are shown.
 
--Refresh Functionality:
+- Refresh Functionality:
 
-  Provides a "Refresh" button to fetch a new random user's data.
-  Utilizes the fetchData function to fetch and update the user data on button press.
+ - Provides a "Refresh" button to fetch a new random user's data.
+ - Utilizes the fetchData function to fetch and update the user data on button press.
 
--Navigation:
+- Navigation:
 
-  Utilizes React Navigation for navigation within the app.
-  Navigates back to the previous screen when the "arrow-back" button is pressed.  
+ - Utilizes React Navigation for navigation within the app.
+ - Navigates back to the previous screen when the "arrow-back" button is pressed.  
 
--Styling and UI Elements:
+- Styling and UI Elements:
 
-  Applies styles to format and present the UI elements.
-  Uses various components such as Text, Image, ScrollView, View, TouchableOpacity, and Ionicons for a rich user interface.
+ - Applies styles to format and present the UI elements.
+ - Uses various components such as Text, Image, ScrollView, View, TouchableOpacity, and Ionicons for a rich user interface.
 
--Error Handling:
+- Error Handling:
 
-  Implements error handling for API requests, logging errors to the console.
+ - Implements error handling for API requests, logging errors to the console.
 
--Expo Usage:
+- Expo Usage:
 
-  Developed using Expo, including Expo-specific components and features.
+ - Developed using Expo, including Expo-specific components and features.
 
 ## Features
 
