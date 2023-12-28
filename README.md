@@ -28,7 +28,7 @@ npx create-react-native-app
 Once you're up and running with Create React Native App, visit [this tutorial](https://reactnative.dev/docs/tutorial.html) for more information on building apps with React Native.
 
 ## A brief overview of the project
-- User Data Fetching:
+- User Data Fetching & Data Handling:
 
   - Utilizes the Axios library to make HTTP requests.
   - Fetches user data from the 'https://random-data-api.com/api/users/random_user' API endpoint.
@@ -57,6 +57,14 @@ Once you're up and running with Create React Native App, visit [this tutorial](h
 - Error Handling:
 
   - Implements error handling for API requests, logging errors to the console.
+
+- Code Quality:
+
+  - Clean, organized, and well-commented code  
+
+- React Native Usage:  
+
+  -  Efficient use of React Native components and navigation
 
 - Expo Usage:
 
