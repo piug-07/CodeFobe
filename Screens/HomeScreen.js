@@ -79,7 +79,6 @@ const HomeScreen = () => {
 
           <View style={{ marginBottom: 10 }}>
             <Pressable style={{
-              flex: 1,
               flexDirection: 'row',
               width: 370,
               height: 'auto',
@@ -126,15 +125,13 @@ const HomeScreen = () => {
             // console.log("data", element)
             return (
               <View style={{ marginBottom: 10 }} key={index}>
-                <Pressable style={{
-                  flex: 1,
+                <View style={{
                   flexDirection: 'row',
                   width: 370,
                   height: 'auto',
                   padding: 5,
                   backgroundColor: '#bfd0de',
                   alignItems: 'center',
-                  // justifyContent: 'space-evenly',
                   borderRadius: 10,
                   marginTop: 10,
                 }} >
@@ -159,9 +156,6 @@ const HomeScreen = () => {
                         height: 55,
                         borderRadius: 50
                       }}
-                      // source={{
-                      //   uri: 'https://i.postimg.cc/mD0J0xYw/Whats-App-Image-2023-12-23-at-10-36-11-c59d566b.jpg',
-                      // }}
                       source={{
                         uri: element.avatar,
                       }}
@@ -172,7 +166,6 @@ const HomeScreen = () => {
                     <Text style={{ width: 70, }}>
                       {element.first_name}
                     </Text>
-                    {/* first_name */}
                   </View>
 
                   <View style={styles.user4}>
@@ -182,12 +175,10 @@ const HomeScreen = () => {
                         : element.employment.key_skill
                       }
                     </Text>
-                    {/* employment.key_skill */}
                   </View>
 
-                </Pressable>
+                </View>
               </View>
-
             );
           })}
         </View>

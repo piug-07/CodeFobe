@@ -3,8 +3,6 @@ import { ScrollView, StyleSheet, View, Text, TouchableOpacity, Image, ImageBackg
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import axios from 'axios';
-import image from '../../assets/elvis-bekmanis-01EbaBH1g3Y-unsplash (2).jpg';
-
 
 const UserProfile = () => {
     const [data, setData] = useState([]);
@@ -35,21 +33,26 @@ const UserProfile = () => {
 
     return (
         <ScrollView>
-            <ImageBackground source={image} resizeMode="cover" styel={{
-                flex: 1,
-                resizeMode: 'cover',
-                justifyContent: 'center',
-                brightness: 0.1,
-            }}>
+            <ImageBackground
+                source={{
+                    uri: 'https://i.postimg.cc/T3TkJ96N/elvis-bekmanis-01-Eba-BH1g3-Y-unsplash-2.jpg',
+                }} 
+                resizeMode="cover"
+                styel={{
+                    flex: 1,
+                    resizeMode: 'cover',
+                    justifyContent: 'center',
+                    brightness: 0.1,
+                }}>
                 <View style={{ flex: 1 }} >
                     {/* ----------------------------header section------------------------ */}
                     <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
-                        <Text style={{ alignItems: 'center', fontSize: 20, fontWeight: 'bold', marginTop: 10 }}>
+                        <Text style={{ alignItems: 'center', fontSize: 20, fontWeight: 'bold', marginTop: 10, marginLeft:20}}>
                             <Ionicons
                                 onPress={() => navigation.goBack()}
-                                style={{ marginLeft: 5, marginRight: 5 }}
+                                style={{ marginLeft: 5, marginRight: 15, marginTop:10}}
                                 name="arrow-back"
-                                size={26}
+                                size={30}
                                 color="black"
                             />
                             UserProfile
@@ -84,6 +87,7 @@ const UserProfile = () => {
                                             borderRadius: 100,
                                             alignItems: 'center',
                                             marginHorizontal: 'auto',
+                                            marginLeft:100,
                                             marginTop: 35,
                                             borderWidth: 1,
                                             borderColor: '#5cb1f7'
@@ -210,7 +214,7 @@ const UserProfile = () => {
                     })}
                 </View>
             </ImageBackground>
-        </ScrollView>
+        </ScrollView >
     );
 };
 
