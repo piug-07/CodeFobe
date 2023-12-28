@@ -11,7 +11,11 @@ const HomeScreen = () => {
 
   useEffect(() => {
     axios.get('https://random-data-api.com/api/users/random_user?size=80').then((response) => {
-      setData(response.data);
+      if(response){
+        setData(response.data);
+      }else{
+        alert("Something went wrong")
+      }
       // console.log(response.data)
     });
   }, []);
@@ -89,6 +93,7 @@ const HomeScreen = () => {
               borderRadius: 10,
               marginTop: 10,
             }}>
+
               <View >
                 <Text>
                   S.no
@@ -121,7 +126,7 @@ const HomeScreen = () => {
             </Pressable>
           </View>
 
-          {data.map((element, index) => {
+          {data?.map((element, index) => {
             // console.log("data", element)
             return (
               <View style={{ marginBottom: 10 }} key={index}>
@@ -145,7 +150,7 @@ const HomeScreen = () => {
                   </View>
                   <View >
                     <Text style={{ marginRight: 15 }}>
-                      {element.id}
+                      {element.id ? element.id :""}
                     </Text>
                   </View>
 
@@ -157,14 +162,14 @@ const HomeScreen = () => {
                         borderRadius: 50
                       }}
                       source={{
-                        uri: element.avatar,
+                        uri: element.avatar? element.avatar: "",
                       }}
                     />
                   </View>
 
                   <View >
                     <Text style={{ width: 70, }}>
-                      {element.first_name}
+                      {element.first_name ? element.first_name:""}
                     </Text>
                   </View>
 

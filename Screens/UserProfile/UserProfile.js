@@ -36,7 +36,7 @@ const UserProfile = () => {
             <ImageBackground
                 source={{
                     uri: 'https://i.postimg.cc/T3TkJ96N/elvis-bekmanis-01-Eba-BH1g3-Y-unsplash-2.jpg',
-                }} 
+                }}
                 resizeMode="cover"
                 styel={{
                     flex: 1,
@@ -47,10 +47,10 @@ const UserProfile = () => {
                 <View style={{ flex: 1 }} >
                     {/* ----------------------------header section------------------------ */}
                     <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
-                        <Text style={{ alignItems: 'center', fontSize: 20, fontWeight: 'bold', marginTop: 10, marginLeft:20}}>
+                        <Text style={{ alignItems: 'center', fontSize: 20, fontWeight: 'bold', marginTop: 10, marginLeft: 20 }}>
                             <Ionicons
                                 onPress={() => navigation.goBack()}
-                                style={{ marginLeft: 5, marginRight: 15, marginTop:10}}
+                                style={{ marginLeft: 5, marginRight: 15, marginTop: 10 }}
                                 name="arrow-back"
                                 size={30}
                                 color="black"
@@ -65,7 +65,7 @@ const UserProfile = () => {
                         </Pressable>
                     </View>
                     <View style={{ borderBottomWidth: 1, borderBottomColor: '#5cb1f7', marginVertical: 10 }} />
-                    {data.map((element, index) => {
+                    {data?.map((element, index) => {
                         // console.log(element)
                         return (
                             <View style={{ flex: 1 }} key={index}>
@@ -87,7 +87,7 @@ const UserProfile = () => {
                                             borderRadius: 100,
                                             alignItems: 'center',
                                             marginHorizontal: 'auto',
-                                            marginLeft:100,
+                                            marginLeft: 100,
                                             marginTop: 35,
                                             borderWidth: 1,
                                             borderColor: '#5cb1f7'
@@ -96,13 +96,13 @@ const UserProfile = () => {
                                         //     uri: 'https://i.postimg.cc/mD0J0xYw/Whats-App-Image-2023-12-23-at-10-36-11-c59d566b.jpg',
                                         // }}
                                         source={{
-                                            uri: element.avatar,
+                                            uri: element.avatar ? element.avatar : "https://i.postimg.cc/mD0J0xYw/Whats-App-Image-2023-12-23-at-10-36-11-c59d566b.jpg",
                                         }}
                                     />
                                 </View>
                                 <View>
                                     <Text style={{ fontSize: 20, fontWeight: 'bold', marginTop: 20, textAlign: 'center' }}>
-                                        {element.username}
+                                        {element.username ? element.username : ""}
 
                                     </Text>
                                 </View>
@@ -116,7 +116,7 @@ const UserProfile = () => {
                                             FullName :
                                         </Text>
                                         <Text style={{ fontSize: 15, fontWeight: '400', }}>
-                                            {element.first_name} {element.last_name}
+                                            {element.first_name ? element.first_name : ""} {element.last_name ? element.last_name : ""}
                                         </Text>
                                     </View>
                                     <View style={{ flexDirection: 'row', marginTop: 20, marginBottom: 10, marginLeft: 35, marginRight: 40, }}>
@@ -124,7 +124,7 @@ const UserProfile = () => {
                                             Email :
                                         </Text>
                                         <Text style={{ fontSize: 15, fontWeight: '400', }}>
-                                            {element.email}
+                                            {element.email ? element.email : ""}
                                         </Text>
                                     </View>
                                     <View style={{ flexDirection: 'row', marginTop: 20, marginBottom: 10, marginLeft: 35, marginRight: 40, }}>
@@ -132,7 +132,7 @@ const UserProfile = () => {
                                             Gender :
                                         </Text>
                                         <Text style={{ fontSize: 15, fontWeight: '400', }}>
-                                            {element.gender}
+                                            {element.gender ? element.gender : ""}
                                         </Text>
                                     </View>
                                     <View style={{ flexDirection: 'row', marginTop: 20, marginBottom: 10, marginLeft: 35, marginRight: 40, }}>
@@ -140,7 +140,7 @@ const UserProfile = () => {
                                             PhoneNo. :
                                         </Text>
                                         <Text style={{ fontSize: 15, fontWeight: '400', }}>
-                                            {element.phone_number}
+                                            {element.phone_number ? element.phone_number : ""}
                                         </Text>
                                     </View>
                                     <View style={{ flexDirection: 'row', marginTop: 20, marginBottom: 10, marginLeft: 35, marginRight: 40, }}>
@@ -148,7 +148,7 @@ const UserProfile = () => {
                                             Date Of Birth :
                                         </Text>
                                         <Text style={{ fontSize: 15, fontWeight: '400', }}>
-                                            {element.date_of_birth}
+                                            {element.date_of_birth ? element.date_of_birth : ""}
                                         </Text>
                                     </View>
                                     <View style={{ flexDirection: 'row', marginTop: 20, marginBottom: 10, marginLeft: 35, marginRight: 40, }}>
@@ -156,7 +156,7 @@ const UserProfile = () => {
                                             Uid :
                                         </Text>
                                         <Text style={{ fontSize: 15, fontWeight: '400', }}>
-                                            {element.uid}
+                                            {element.uid ? element.uid : ""}
                                         </Text>
                                     </View>
                                 </View>
@@ -170,7 +170,7 @@ const UserProfile = () => {
                                                 Title :
                                             </Text>
                                             <Text style={{ fontSize: 15, fontWeight: '400', }}>
-                                                {element.employment.title}
+                                                {element.employment.title ? element.employment.title : ""}
                                             </Text>
                                         </View>
                                         <View style={{ flexDirection: 'row', marginTop: 20, marginBottom: 10, marginLeft: 35, marginRight: 40, }}>
@@ -179,7 +179,7 @@ const UserProfile = () => {
                                                 Key Skill :
                                             </Text>
                                             <Text style={{ fontSize: 15, fontWeight: '400', }}>
-                                                {element.employment.key_skill}
+                                                {element.employment.key_skill ? element.employment.key_skill : ""}
                                             </Text>
                                         </View>
                                     </View>
@@ -203,7 +203,7 @@ const UserProfile = () => {
                                                 Country :
                                             </Text>
                                             <Text style={{ fontSize: 15, fontWeight: '400', }}>
-                                                {element.address.country}
+                                                {element.address.country ? element.address.country : ""}
                                             </Text>
                                         </View>
                                     </View>
